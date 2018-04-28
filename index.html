@@ -62,7 +62,11 @@
       // More info about config & dependencies:
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({ dependencies: [
+      Reveal.initialize({
+        history: true,
+        center: false,
+        maxScale: 0.7,
+        dependencies: [
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
