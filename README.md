@@ -1,2 +1,3 @@
-# charla-git
- Slides de la charla sobre Git
+# Charla Git
+
+Slides de la charla sobre Git.
