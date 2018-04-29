@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/theme/white.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/atom-one-light.css">
 
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="plugin/font-awesome/css/fontawesome-all.min.css" />
@@ -181,6 +181,187 @@
           </section>
         </section>
 
+        <section>
+          <h2>No es el único</h2>
+          <img src="img/vcss.png" alt=""/>
+          <aside class="notes">
+            Pero es el más popular, varios proyectos han migrado
+            de otros VCS a git.
+
+            CPython se movió de Mercurial a Git (PEP0481) y
+            a GitHub (PEP0512).
+
+            Linux usa Git.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Git</h2>
+          <p>
+            <ul>
+              <li>Linus Torvalds, 2005</li>
+              <li>Open source</li>
+              <li>VCS distribuído</li>
+              <li>Multiplataforma</li>
+              <li>Integración con varios editores e IDEs</li>
+            </ul>
+          </p>
+          <aside class="notes">
+            Git es una palabra en Inglés,
+            es mejor que no sepan su significado.
+          </aside>
+        </section>
+
+        <section>
+          <h2>¿Cómo funciona?</h2>
+          <ul>
+            <li>Le decimos a Git que mantenga un registro de nuestros archivos</li>
+            <li>Editamos nuestros archivos</li>
+            <li>Le decimos a Git que guarde nuestros cambios</li>
+            <li>Volvemos a editar nuestros archivos</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Conceptos básicos</h2>
+          <section>
+            <h3>Repositorio (repo)</h3>
+            <p>
+              Es nuestro proyecto.
+              Tenemos repos locales y remotos.
+            </p>
+          </section>
+          <section>
+            <h3>Commit</h3>
+            <p>
+              Un punto de restauración (snapshot) de nuesto proyecto.
+              Cada commit está identificado por un hash único (SHA-1)
+              <code>a906cb2a4a904a152e80877d4088654daad0c859</code>.
+            </p>
+          </section>
+          <section>
+            <h3>Los 3 estados</h3>
+            <ul>
+              <li>Área de trabajo (working directory)</li>
+              <li>Área de staging (staging area)</li>
+              <li>Área del repositorio (repo area)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Los 3 estados</h3>
+            <ul>
+              <li>Working directory (los archivos editados)</li>
+              <li>Staging area (qué cambios vamos a agregar a nuestro siguiente commit)</li>
+              <li>Repo area (dónde Git almacena todos los datos de nuestro repo)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Los 3 estados</h3>
+            <img src="img/git-states.png" alt=""/>
+          </section>
+        </section>
+
+        <section class="center">
+          <h2>Instalación</h2>
+          <p>
+            <a href="https://git-scm.com/download/">
+              https://git-scm.com/download/
+            </a>
+          </p>
+          <p>
+            <code>
+              git --version
+            </code>
+          </p>
+        </section>
+
+        <section>
+          <header>
+            <h3>Haciéndole saber a Git quién soy</h3>
+            <i>Registrándonos como viajeros del tiempo</i>
+          </header>
+          <p>
+            <pre>
+              <code class="hlbash" data-trim>
+                git config --global user.name "Santos Gallegos"
+                git config --global user.email "santos_g@outlook"
+              </code>
+            </pre>
+          </p>
+          <aside class="notes">
+            <p>
+              Esto se hace una sóla vez.
+            </p>
+            <p>
+              Podemos comprobar que nuestros datos están correctos
+              ejecutando el mismo comando, pero sin el nombre/email.
+              O con <code>git config --list</code>.
+            </p>
+          </aside>
+        </section>
+
+        <section>
+          <header>
+            <h2>Iniciando nuestro repo</h2>
+            <i>Preparándo nuestra máquina del tiempo</i>
+          </header>
+          <p>
+            <pre>
+              <code class="hlbash" data-trim>
+                cd /home/mi_proyecto/
+                git init
+              </code>
+            </pre>
+          </p>
+          <aside class="notes">
+            Podemos comprobar que nuestro repositorio se ha creado
+            comprobando que existe un directorio oculto <code>.git</code>.
+          </aside>
+        </section>
+
+        <section>
+          <header>
+            <h2>Git status</h2>
+            <i>¿En qué state están mis archivo?</i>
+          </header>
+          <section>
+            <p>
+              <pre>
+                <code class="hlbash" data-trim>
+                  git status
+                </code>
+              </pre>
+            </p> 
+          </section>
+          <section>
+            <p>
+              Archivos nuevos no son registrados por Git (untracked).
+            </p>
+          </section>
+          <section>
+            <p>
+              Para hacer que Git los registre.
+              <pre>
+                <code class="hlbash" data-trim>
+                  git add viajero_temporal.py
+                </code>
+              </pre>
+            </p>
+          </section>
+          <section>
+            <p>
+              Para hacer que Git <b>realmente</b> los registre.
+              <pre>
+                <code class="hlbash" data-trim>
+                  git commit
+                </code>
+              </pre>
+            </p>
+          </section>
+          <section>
+            <img src="img/git-flow.png" alt=""/>
+          </section>
+        </section>
       </div>
     </div>
 
