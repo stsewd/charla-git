@@ -251,8 +251,8 @@
             <h3>Los 3 estados</h3>
             <ul>
               <li>Working directory (los archivos editados)</li>
-              <li>Staging area (qué cambios vamos a agregar a nuestro siguiente commit)</li>
-              <li>Repo area (dónde Git almacena todos los datos de nuestro repo)</li>
+              <li>Staging area (cambios a ser guardados)</li>
+              <li>Repo area (cambios guardados)</li>
             </ul>
           </section>
           <section>
@@ -322,7 +322,7 @@
         <section>
           <header>
             <h2>Git status</h2>
-            <i>¿En qué state están mis archivo?</i>
+            <i>¿En qué estado están mis archivo?</i>
           </header>
           <section>
             <p>
@@ -340,17 +340,17 @@
           </section>
           <section>
             <p>
-              Para hacer que Git los registre.
+              Cambios a ser guardados
               <pre>
                 <code class="hlbash" data-trim>
-                  git add viajero_temporal.py
+                  git add <archivo>
                 </code>
               </pre>
             </p>
           </section>
           <section>
             <p>
-              Para hacer que Git <b>realmente</b> los registre.
+              Guardar nuestros cambios
               <pre>
                 <code class="hlbash" data-trim>
                   git commit
