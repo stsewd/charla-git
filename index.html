@@ -56,16 +56,15 @@
           <p>
             Es un...
           </p>
-          <section>
-            <aside class="notes">
-              <p>
-                Probablemente algunos ya sabrán o habrán investigado qué es
-              </p>
-            </aside>
-          </section>
-          <section>
+
+          <p class="fragment">
             Más adelante lo descubriremos
-          </section>
+          </p>
+          <aside class="notes">
+            <p>
+              Probablemente algunos ya sabrán o habrán investigado qué es
+            </p>
+          </aside>
         </section>
 
         <section class="center">
@@ -81,12 +80,12 @@
               Algunas cosas pueden salir mal
             </p>
             <ul>
-              <li>Se borre el archivo</li>
-              <li>Olvidar qué fue lo último que hice y cuándo</li>
-              <li>Editar/eliminar la parte equivocada</li>
-              <li>Olvidar porqué edite/eliminé esa parte</li>
-              <li>Compartirlo con alguien más</li>
-              <li>Explicar porqué edité/eliminé esa parte</li>
+              <li class="fragment">Se borre el archivo</li>
+              <li class="fragment">Olvidar qué fue lo último que hice y cuándo</li>
+              <li class="fragment">Editar/eliminar la parte equivocada</li>
+              <li class="fragment">Olvidar porqué edite/eliminé esa parte</li>
+              <li class="fragment">Compartirlo con alguien más</li>
+              <li class="fragment">Explicar porqué edité/eliminé esa parte</li>
             </ul>
             <aside class="notes">
               <p>
@@ -111,9 +110,9 @@
             <p>
               Tener todo la información en el presente es un caos
             </p>
-            <ul>
-              <li>Tener una máquina del tiempo</li>
-            </ul>
+            <p class="fragment">
+              <strong>Tener una máquina del tiempo</strong>
+            </p>
           </section>
         </section>
 
@@ -126,9 +125,9 @@
               Todo puede salir muy mal
             </p>
             <ul>
-              <li>Trabajar todos al mismo tiempo</li>
-              <li>Unir los cambios</li>
-              <li>Quién hizo qué</li>
+              <li class="fragment">Trabajar todos al mismo tiempo</li>
+              <li class="fragment">Unir los cambios</li>
+              <li class="fragment">Quién hizo qué</li>
             </ul>
           </section>
           
@@ -138,9 +137,9 @@
               Tener todo la información y todas las personas
               en el presente es un caos
             </p>
-            <ul>
-              <li>Tener muchas máquinas del tiempo</li>
-            </ul>
+            <p class="fragment">
+              <strong>Tener muchas máquinas del tiempo</strong>
+            </p>
           </section>
         </section>
 
@@ -226,18 +225,21 @@
           <h2>Conceptos básicos</h2>
           <section>
             <h3>Repositorio (repo)</h3>
-            <p>
-              Es nuestro proyecto.
-              Tenemos repos locales y remotos.
+            <ul>
+              <li>Es nuestro proyecto</li>
+              <li>Tenemos repos locales y remotos</li>
+            </ul>
             </p>
           </section>
           <section>
             <h3>Commit</h3>
-            <p>
-              Un punto de restauración (snapshot) de nuesto proyecto.
-              Cada commit está identificado por un hash único (SHA-1)
-              <code>a906cb2a4a904a152e80877d4088654daad0c859</code>.
-            </p>
+            <ul>
+              <li>Un punto de restauración (snapshot) de nuesto proyecto</li>
+              <li>Cada commit está identificado por un hash único (SHA-1)</li>
+              <p>
+                <code>a906cb2a4a904a152e80877d4088654daad0c859</code>.
+              </p>
+            </ul>
           </section>
           <section>
             <h3>Los 3 estados</h3>
@@ -282,7 +284,7 @@
           </header>
           <p>
             <pre>
-              <code class="hlbash" data-trim>
+              <code class="bash" data-trim>
                 git config --global user.name "Santos Gallegos"
                 git config --global user.email "santos_g@outlook"
               </code>
@@ -307,7 +309,7 @@
           </header>
           <p>
             <pre>
-              <code class="hlbash" data-trim>
+              <code class="bash" data-trim>
                 cd /home/mi_proyecto/
                 git init
               </code>
@@ -327,7 +329,7 @@
           <section>
             <p>
               <pre>
-                <code class="hlbash" data-trim>
+                <code class="bash" data-trim>
                   git status
                 </code>
               </pre>
@@ -342,7 +344,7 @@
             <p>
               Cambios a ser guardados
               <pre>
-                <code class="hlbash" data-trim>
+                <code class="bash" data-trim>
                   git add &lt;archivo&gt;
                 </code>
               </pre>
@@ -352,7 +354,7 @@
             <p>
               Guardar nuestros cambios
               <pre>
-                <code class="hlbash" data-trim>
+                <code class="bash" data-trim>
                   git commit
                 </code>
               </pre>
@@ -373,7 +375,7 @@
             <p>
               Ver todos nuestros commits
               <pre>
-                <code class="hlbash" data-trim>
+                <code class="bash" data-trim>
                   git log
                 </code>
               </pre>
@@ -384,7 +386,7 @@
             <p>
               Ver un commit específico
               <pre>
-                <code class="hlbash" data-trim>
+                <code class="bash" data-trim>
                   git show &lt;hash&gt;
                 </code>
               </pre>
