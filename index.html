@@ -393,7 +393,35 @@
         </section>
 
         <section>
-          Git ignore
+          <header>
+            <h2>Ignorando archivos</h2>
+            <i>Información no relevante para mis viajes en el tiempo</i>
+          </header>
+          <section>
+            <ul>
+              <li>Archivos autogenerados</li>
+              <li>Archivos sensibles (contraseñas, configuraciones de producción)</li>
+              <li>Archivos del sistema operativo (*~, .DS_Store, Thumbs.db)</li>
+            </ul>
+          </section>
+            
+          <section>
+            <pre>
+              <code class="nohighlight" data-trim>
+                # Archivo .gitignore
+
+                # Archivos del SO
+                *.DS_Store
+                *~
+                Thumbs.db
+
+                # Otros archivos
+                build/
+                passwords.txt
+              </code>
+            </pre>
+          </section>
+          
         </section>
 
         <section>
