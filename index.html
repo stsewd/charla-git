@@ -140,6 +140,11 @@
               <li class="fragment">Unir los cambios</li>
               <li class="fragment">Quién hizo qué</li>
             </ul>
+            <aside class="notes">
+              Tenemos los mismos problemas que escribiendo un texto
+              solo y ahora tenemos que lidear con personas.
+              Cada integrante tiene los mismos problemas.
+            </aside>
           </section>
           
           <section>
@@ -172,6 +177,9 @@
             Es un...
           </p>
           <section>
+            <aside class="notes">
+              Esperar o pedir al público que responda
+            </aside>
           </section>
           <section>
             <p>
@@ -240,17 +248,25 @@
               <li>Es nuestro proyecto</li>
               <li>Tenemos repos locales y remotos</li>
             </ul>
-            </p>
+            <aside class="notes">
+              Por ahora vamos a enfocarnos en repos locales,
+              más adelante hablaremos sobre los remotos.
+            </aside>
           </section>
           <section>
             <h3>Commit</h3>
             <ul>
               <li>Un punto de restauración (snapshot) de nuesto proyecto</li>
-              <li>Cada commit está identificado por un hash único (SHA-1)</li>
+              <li>Cada commit está identificado por un hash (SHA-1)</li>
               <p>
                 <code>a906cb2a4a904a152e80877d4088654daad0c859</code>.
               </p>
             </ul>
+            <aside class="notes">
+              Cada commit guarda el estado actual de todo nuestro proyecto.
+              Cada hash es único para cada commit, le sirve a git para comprobar
+              la integridad de nuestro commit.
+            </aside>
           </section>
           <section>
             <h3>Los 3 estados</h3>
@@ -345,11 +361,13 @@
                 </code>
               </pre>
             </p> 
-          </section>
-          <section>
             <p>
               Archivos nuevos no son registrados por Git (untracked).
             </p>
+            <aside class="notes">
+              Nos dice el stado actual de nuestros archivos,
+              la rama
+            </aside>
           </section>
           <section>
             <p>
@@ -360,6 +378,9 @@
                 </code>
               </pre>
             </p>
+            <aside class="notes">
+              Volver a hacer git status
+            </aside>
           </section>
           <section>
             <p>
@@ -370,6 +391,12 @@
                 </code>
               </pre>
             </p>
+            <aside class="notes">
+              Hacer varios commits.
+              También podemos usar git commit -m "Mensaje".
+              Volver a hacer git status.
+              Mostrar como obtener ayuda desde Git.
+            </aside>
           </section>
           <section>
             <img src="img/git-flow.png" alt=""/>
@@ -423,6 +450,9 @@
                 passwords.txt
               </code>
             </pre>
+            <aside class="notes">
+              Agregar un par de cosas al .gitignore
+            </aside>
           </section>
           
         </section>
@@ -441,6 +471,11 @@
               git checkout &lt;hash&gt;
             </code>
           </pre>
+          <aside class="notes">
+            Hacer un par de checkouts,
+            mostrar el log,
+            volver a la rama master.
+          </aside>
         </section>
 
         <section class="center">
@@ -456,19 +491,20 @@
             <li>Nos permite alojar nuestros repos</li>
             <li>Aloja varios proyectos open source (Linux y Python)</li>
             <li>Organizaciones, seguidores, estrellas</li>
-            <li>Bug tracker</li>
+            <li>Bug tracker (issues)</li>
             <li>Code reviews</li>
             <li>Permisos sobre un repositorio</li>
-            <li><strong>Pull requests</strong></li>
+            <li><strong>Pull requests (PR)</strong></li>
           </ul>
           <aside class="notes">
             <p>
+              Pull requests son propio de GitHub, no de git. 
               Y muchas cosas más para nuestros proyectos como wiki, tablero de tareas,
               web hooks para interactuar con otros servicios (como un servicio de C.I.)
             </p>
             <p>
               <ul>
-                <li>Crear un repo en GitHub</li>
+                <li>Crear un repo en GitHub (con readme y licence)</li>
               </ul>
             </p>
           </aside>
@@ -484,6 +520,10 @@
               git clone &lt;url del repo&gt;
             </code>
           </pre>
+          <aside class="notes">
+            Clonar el repo de PythonEcuador.
+            Clonar el repo anteriormente creado.
+          </aside>
         </section>
 
         <section>
@@ -510,6 +550,8 @@
               </code>
             </pre>
             <aside class="notes">
+              Listar el remoto del repo clonado,
+              eliminar el remoto y volver a agregarlo.
               Tenemos más comandos como renombrar, mostrar, etc
             </aside>
           </section>
@@ -517,6 +559,12 @@
 
         <section>
           <h2>Publicar y obtener cambios</h2>
+          <p>
+            Para compartir nuestros cambios
+            debemos subirlos a nuestro remoto,
+            o sincronizar nuestro repo local en caso que alguien más
+            haya subido sus cambios.
+          </p>
           <pre>
             <code class="bash" data-trim>
               # Publicar cambios a un remoto
@@ -579,6 +627,9 @@
                 git checkout -b &lt;nombre&gt; 
               </code>
             </pre>
+            <aside class="notes">
+              Ejecutar los comandos, recordar usar help
+            </aside>
           </section>
         </section>
 
@@ -589,6 +640,10 @@
               Si tenemos cambios que no hemos guardado (commit).
               Y queremos cambiar de rama/commit, Git se quejará.
             </p>  
+            <aside class="notes">
+              Hacer cambios cruzados entre ramas para mostrar como git
+              se queja.
+            </aside>
           </section>
           <section>
             <pre>
@@ -600,6 +655,10 @@
                 git stash pop
               </code>
             </pre>
+            <aside class="notes">
+              Hacer el mismo checkout con el stash
+              para comprobar que git no se queja esta vez
+            </aside>
           </section>
         </section>
 
@@ -627,6 +686,10 @@
                 git merge &lt;otra rama&gt;
               </code>
             </pre>
+            <aside class="notes">
+              Si las ramas han divergido, se creará un nuevo commit
+              (merge commit). Mostrar un merge.
+            </aside>
           </section>
           <section>
             <p>
@@ -639,6 +702,9 @@
                 <li class="fragment">Hacer un commit para continuar con el merge</li>
               </ul>
             </p>
+            <aside class="notes">
+              Generar un conflicto y resolver el merge.
+            </aside>
           </section>
         </section>
 
@@ -646,21 +712,28 @@
           <h2>Forks</h2>
           <p>
             Si vemos un proyecto en GitHub que nos gustaría mejorar o colaborar en su desarrollo.
-            <strong>Hacemos un fork</strong>. Se creará una copia del repositorio en tu cuenta.
+            <strong>Hacemos un fork</strong>. Se creará una copia del repositorio en tu tuenta.
           </p>
+          <aside class="notes">
+            Hacer un fork del repo de Python Ecuador
+          </aside>
         </section>
 
         <section>
-          <h2>Pull requests</h2>
+          <h2>Pull requests (PR)</h2>
           <p>Es la manera en que envias tus cambios a un proyecto.</p>
           <ul>
             <li>Hacer un fork</li>
-            <li>Clonar el repositorio</li>
+            <li>Clunar el repositorio</li>
             <li>Agregar un remoto</li>
             <li>Crear una nueva rama local</li>
             <li>Hacer los cambios</li>
             <li>Enviar un pull requests</li>
           </ul>
+          <aside class="notes">
+            Hacer un PR en el repo de Python Ecuador.
+            Mencionar que pueden empezar a hacer un PR en esta presentación.
+          </aside>
         </section>
 
         <section>
@@ -674,6 +747,9 @@
             <li>Luego podrás usar cualquier cliente gráfico sin problema</li>
             <li>Varios IDEs y editores cuentan con integración con Git</li>
           </ul>
+          <aside class="notes">
+            Mostrar gitg
+          </aside>
         </section>
 
         <section>
