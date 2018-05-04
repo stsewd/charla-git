@@ -605,7 +605,42 @@
         </section>
 
         <section>
-          Creando un repo en GitHub
+          <h2>Mezclando ramas</h2>
+          <section>
+            <p>
+              Nuestra nueva funcionalidad funciona.
+              Tiempo de mezclarla a nuestra rama principal.
+            </p>
+          </section>
+          <section>
+            <img src="img/pre-merge.png" alt=""/>
+          </section>
+          <section>
+            <img src="img/merge.png" alt=""/>
+          </section>
+          <section>
+            <pre>
+              <code class="bash" data-trim>
+                # Cambiar a la rama base
+                git checkout &lt;rama base&gt;
+
+                # Mezclar nuestras ramas
+                git merge &lt;otra rama&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>
+              Conflictos al mezclar
+              <ul>
+                <li class="fragment">Cuando en ambas ramas se modificaron las mismas líneas de un archivo</li>
+                <li class="fragment">Basta con abrir el archivo y buscar las marcas especiales</li>
+                <li class="fragment">Quedarnos con los cambios necesarios</li>
+                <li class="fragment">Hacer un git add para marcar los conflictos como resueltos</li>
+                <li class="fragment">Hacer un commit para continuar con el merge</li>
+              </ul>
+            </p>
+          </section>
         </section>
 
         <section>
