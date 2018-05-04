@@ -582,7 +582,24 @@
         </section>
 
         <section>
-          Git clone
+          <h2>Problemas de los viajes en el tiempo</h2>
+          <section>
+            <p>
+              Si tenemos cambios que no hemos guardado (commit).
+              Y queremos cambiar de rama/commit, Git se quejará.
+            </p>  
+          </section>
+          <section>
+            <pre>
+              <code class="bash" data-trim>
+                # Guardar nuestros cambios sin confirmar
+                git stash
+
+                # Volver a aplicar nuestros cambios
+                git stash pop
+              </code>
+            </pre>
+          </section>
         </section>
 
         <section>
