@@ -7,26 +7,18 @@
 
   <title>Viajando en el tiempo con Git y GitHub - Santos Gallegos</title>
 
-  <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/white.css">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/white.css">
 
   <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="lib/css/atom-one-light.css">
+  <link rel="stylesheet" href="css/atom-one-light.css">
 
-  <!-- Font-Awesome -->
-  <link rel="stylesheet" href="plugin/font-awesome/css/fontawesome-all.min.css" />
+  <!-- Fontawewome -->
+  <link href="plugin/fontawesome/css/all.min.css" rel="stylesheet">
 
   <!-- Custom css -->
   <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
-
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
 </head>
 
 <body>
@@ -761,13 +753,8 @@
             </a>
           </li>
           <li>
-            <a href="https://try.github.io">
-              TryGit en el navegador
-            </a>
-          </li>
-          <li>
-            <a href="https://help.github.com/">
-              Ayuda de GitHub
+            <a href="https://docs.github.com/en/get-started/quickstart">
+              Documentación de GitHub
             </a>
           </li>
           <li>
@@ -776,7 +763,7 @@
             </a>
           </li>
         </ul>
-        <footer class="footer">
+        <footer>
           <p>
             <small class="text-center">
               <a href="https://github.com/stsewd/charla-git/">
@@ -788,8 +775,8 @@
             <small>
               Santos Gallegos
               -
-              <a href="mailto:santos_g@outlook.com">
-                santos_g@outlook.com
+              <a href="mailto:stsewd@proton.me">
+                stsewd@proton.me
               </a>
             </small>
             <br>
@@ -808,23 +795,19 @@
     </div>
   </div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
-
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
   <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
     Reveal.initialize({
-      history: true,
-      center: false,
+      hash: true,
       maxScale: 0.7,
-      dependencies: [
-        {src: 'plugin/markdown/marked.js'},
-        {src: 'plugin/markdown/markdown.js'},
-        {src: 'plugin/notes/notes.js', async: true},
-        {src: 'plugin/highlight/highlight.js', async: true, callback: function () {hljs.initHighlightingOnLoad();}}
-      ]
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
     });
   </script>
 </body>
