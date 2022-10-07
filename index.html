@@ -1,405 +1,406 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Viajando en el tiempo con Git y GitHub - Santos Gallegos</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/white.css">
+  <title>Viajando en el tiempo con Git y GitHub - Santos Gallegos</title>
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/atom-one-light.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/white.css">
 
-    <!-- Font-Awesome -->
-    <link rel="stylesheet" href="plugin/font-awesome/css/fontawesome-all.min.css" />
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/atom-one-light.css">
 
-    <!-- Custom css -->
-    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="plugin/font-awesome/css/fontawesome-all.min.css" />
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-  </head>
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
 
-        <section class="center">
-          <h1>Viajando en el tiempo con Git</h1>
-          <p>
-            <small>
-              Santos Gallegos
-              -
-              <a href="mailto:stsewd@proton.me">
-                stsewd@proton.me
-              </a>
-            </small>
-            <br>
-            <small>
-              @stsewd
-              <a href="http://github.com/stsewd"><i class="fab fa-github"></i></a>
-              <a href="http://twitter.com/stsewd"><i class="fab fa-twitter"></i></a>
-            </small>
-          </p>
-        </section>
+<body>
+  <div class="reveal">
+    <div class="slides">
 
-        <section>
-          <h2>$ WHOAMI</h2>
-          <ul>
-            <li>Santos Gallegos</li>
-            <li>Read the Docs</li>
-            <li>Web developer <i class="blue fab fa-python"></i></li>
-            <li>Ethical hacker</li>
-            <li>
-              @stsewd - <a href="https://stsewd.dev/" target="_blank">https://stsewd.dev/</a>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Git</h2>
-          <p>
-            Es un...
-          </p>
-
-          <p class="fragment">
-            Más adelante lo descubriremos
-          </p>
-          <aside class="notes">
-            <p>
-              Probablemente algunos ya sabrán o habrán investigado qué es
-            </p>
-          </aside>
-        </section>
-
-        <section class="center">
-          <h2>Problemas del día a día</h2>
-        </section>
-
-        <section>
-          <small>Problemas del día a día (1)</small>
-          <h3>Escribiendo un texto (o código)</h3>
-
-          <section>
-            <p>
-              Algunas cosas pueden salir mal
-            </p>
-            <ul class="fragment">
-              <li>Borrar un archivo</li>
-              <li>Olvidar qué fue lo último que hice y cuándo</li>
-              <li>Editar/eliminar la parte equivocada</li>
-              <li>Olvidar porqué edite/eliminé esa parte</li>
-              <li>Compartirlo con alguien más</li>
-              <li>Explicar porqué edité/eliminé esa parte</li>
-            </ul>
-            <aside class="notes">
-              <p>
-                Busquemos soluciones, como tener mi archivo en Dropbox;
-                tener anotaciones en el mismo archivo;
-                tener anotaciones en un archivo adjunto,
-                tener multiples copias del archivo, etc.
-              </p>
-            </aside>
-          </section>
-
-          <section>
-            <img src="img/sin-vcs.jpg" alt=""/>
-          </section>
-
-          <section>
-            <img src="img/sin-vcs-2.png" alt=""/>
-          </section>
-
-          <section>
-            <h4>Solución</h4>
-            <p>
-              Tener todo la información en el presente es un caos
-            </p>
-            <p>
-              <strong>Tener una máquina del tiempo</strong>
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <small>Problemas del día a día (2)</small>
-          <h3>Escribiendo un texto (o código)</h3>
-          <h3>¡En grupo!</h3>
-          <section>
-            <p>
-              Todo puede salir muy mal
-            </p>
-            <ul class="fragment">
-              <li>Trabajar todos al mismo tiempo</li>
-              <li>Unir los cambios</li>
-              <li>Quién hizo qué</li>
-            </ul>
-            <aside class="notes">
-              Tenemos los mismos problemas que escribiendo un texto
-              solo y ahora tenemos que lidear con personas.
-              Cada integrante tiene los mismos problemas.
-            </aside>
-          </section>
-          
-          <section>
-            <h4>Solución</h4>
-            <p>
-              Tener todo la información y todas las personas
-              en el presente es un caos
-            </p>
-            <p>
-              <strong>Tener muchas máquinas del tiempo</strong>
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <h2>Sistema de control de versiones</h2>
-          <ul>
-            <li>Abreviado VCS</li>
-            <li>Darle seguimiento a los cambios hechos sobre un archivo</li>
-            <li>Restaurar un archivo a un estado anterior</li>
-            <li>Quién, Cuándo, Qué</li>
-            <li>Ramificaciones</li>
-            <li>Mezclar cambios</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Git es...</h2>
-          <section>
-            <p>
-              <s>¡Una máquina del tiempo!</s>
-            </p>
-            <p>
-              Un sistema de control de versiones
-            </p>
-            <p>
-              <small>Pero muy parecido a una máquina del tiempo</small>
-            </p>
-          </section>
-        </section>
-
-        <section>
-          <h2>No es el único</h2>
-          <img src="img/vcss.png" alt=""/>
-          <aside class="notes">
-            Pero es el más popular, varios proyectos han migrado
-            de otros VCS a git.
-
-            CPython se movió de Mercurial a Git (PEP0481) y
-            a GitHub (PEP0512).
-
-            Linux usa Git.
-          </aside>
-        </section>
-
-        <section>
-          <h2>Git</h2>
-          <p>
-            <ul>
-              <li>Linus Torvalds, 2005</li>
-              <li>Open source</li>
-              <li>VCS distribuído</li>
-              <li>Multiplataforma</li>
-              <li>Integración con varios editores e IDEs</li>
-            </ul>
-          </p>
-          <aside class="notes">
-            Git es una palabra en Inglés,
-            es mejor que no sepan su significado.
-          </aside>
-        </section>
-
-        <section>
-          <h2>¿Cómo funciona?</h2>
-          <ul>
-            <li>Le decimos a Git que mantenga un registro de nuestros archivos</li>
-            <li>Editamos nuestros archivos</li>
-            <li>Le decimos a Git que guarde nuestros cambios</li>
-            <li>Volvemos a editar nuestros archivos</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Conceptos básicos</h2>
-          <section>
-            <h3>Repositorio (repo)</h3>
-            <ul>
-              <li>Es nuestro proyecto</li>
-              <li>Tenemos repos locales y remotos</li>
-            </ul>
-            <aside class="notes">
-              Por ahora vamos a enfocarnos en repos locales,
-              más adelante hablaremos sobre los remotos.
-            </aside>
-          </section>
-          <section>
-            <h3>Commit</h3>
-            <ul>
-              <li>Un punto de restauración (snapshot) de nuesto proyecto</li>
-              <li>Cada commit está identificado por un hash (SHA-1)</li>
-              <p>
-                <code>a906cb2a4a904a152e80877d4088654daad0c859</code>.
-              </p>
-            </ul>
-            <aside class="notes">
-              Cada commit guarda el estado actual de todo nuestro proyecto.
-              Cada hash es único para cada commit, le sirve a git para comprobar
-              la integridad de nuestro commit.
-            </aside>
-          </section>
-          <section>
-            <h3>Los 3 estados</h3>
-            <ul>
-              <li>Área de trabajo (working directory)</li>
-              <li>Área de staging (staging area)</li>
-              <li>Área del repositorio (repo area)</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Los 3 estados</h3>
-            <ul>
-              <li>Working directory (los archivos editados)</li>
-              <li>Staging area (cambios a ser guardados)</li>
-              <li>Repo area (cambios guardados)</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Los 3 estados</h3>
-            <img src="img/git-states.png" alt=""/>
-          </section>
-        </section>
-
-        <section class="center">
-          <h2>Instalación</h2>
-          <p>
-            <a href="https://git-scm.com/download/">
-              https://git-scm.com/download/
+      <section class="center">
+        <h1>Viajando en el tiempo con Git</h1>
+        <p>
+          <small>
+            Santos Gallegos
+            -
+            <a href="mailto:stsewd@proton.me">
+              stsewd@proton.me
             </a>
+          </small>
+          <br>
+          <small>
+            @stsewd
+            <a href="http://github.com/stsewd"><i class="fab fa-github"></i></a>
+            <a href="http://twitter.com/stsewd"><i class="fab fa-twitter"></i></a>
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h2>$ WHOAMI</h2>
+        <ul>
+          <li>Santos Gallegos</li>
+          <li>Read the Docs</li>
+          <li>Web developer <i class="blue fab fa-python"></i></li>
+          <li>Ethical hacker</li>
+          <li>
+            @stsewd - <a href="https://stsewd.dev/" target="_blank">https://stsewd.dev/</a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Git</h2>
+        <p>
+          Es un...
+        </p>
+
+        <p class="fragment">
+          Más adelante lo descubriremos
+        </p>
+        <aside class="notes">
+          <p>
+            Probablemente algunos ya sabrán o habrán investigado qué es
+          </p>
+        </aside>
+      </section>
+
+      <section class="center">
+        <h2>Problemas del día a día</h2>
+      </section>
+
+      <section>
+        <small>Problemas del día a día (1)</small>
+        <h3>Escribiendo un texto (o código)</h3>
+
+        <section>
+          <p>
+            Algunas cosas pueden salir mal
+          </p>
+          <ul class="fragment">
+            <li>Borrar un archivo</li>
+            <li>Olvidar qué fue lo último que hice y cuándo</li>
+            <li>Editar/eliminar la parte equivocada</li>
+            <li>Olvidar porqué edite/eliminé esa parte</li>
+            <li>Compartirlo con alguien más</li>
+            <li>Explicar porqué edité/eliminé esa parte</li>
+          </ul>
+          <aside class="notes">
+            <p>
+              Busquemos soluciones, como tener mi archivo en Dropbox;
+              tener anotaciones en el mismo archivo;
+              tener anotaciones en un archivo adjunto,
+              tener multiples copias del archivo, etc.
+            </p>
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/sin-vcs.jpg" alt="" />
+        </section>
+
+        <section>
+          <img src="img/sin-vcs-2.png" alt="" />
+        </section>
+
+        <section>
+          <h4>Solución</h4>
+          <p>
+            Tener todo la información en el presente es un caos
           </p>
           <p>
-            <code>
+            <strong>Tener una máquina del tiempo</strong>
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <small>Problemas del día a día (2)</small>
+        <h3>Escribiendo un texto (o código)</h3>
+        <h3>¡En grupo!</h3>
+        <section>
+          <p>
+            Todo puede salir muy mal
+          </p>
+          <ul class="fragment">
+            <li>Trabajar todos al mismo tiempo</li>
+            <li>Unir los cambios</li>
+            <li>Quién hizo qué</li>
+          </ul>
+          <aside class="notes">
+            Tenemos los mismos problemas que escribiendo un texto
+            solo y ahora tenemos que lidear con personas.
+            Cada integrante tiene los mismos problemas.
+          </aside>
+        </section>
+
+        <section>
+          <h4>Solución</h4>
+          <p>
+            Tener todo la información y todas las personas
+            en el presente es un caos
+          </p>
+          <p>
+            <strong>Tener muchas máquinas del tiempo</strong>
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <h2>Sistema de control de versiones</h2>
+        <ul>
+          <li>Abreviado VCS</li>
+          <li>Darle seguimiento a los cambios hechos sobre un archivo</li>
+          <li>Restaurar un archivo a un estado anterior</li>
+          <li>Quién, Cuándo, Qué</li>
+          <li>Ramificaciones</li>
+          <li>Mezclar cambios</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Git es...</h2>
+        <section>
+          <p>
+            <s>¡Una máquina del tiempo!</s>
+          </p>
+          <p>
+            Un sistema de control de versiones
+          </p>
+          <p>
+            <small>Pero muy parecido a una máquina del tiempo</small>
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <h2>No es el único</h2>
+        <img src="img/vcss.png" alt="" />
+        <aside class="notes">
+          Pero es el más popular, varios proyectos han migrado
+          de otros VCS a git.
+
+          CPython se movió de Mercurial a Git (PEP0481) y
+          a GitHub (PEP0512).
+
+          Linux usa Git.
+        </aside>
+      </section>
+
+      <section>
+        <h2>Git</h2>
+        <p>
+        <ul>
+          <li>Linus Torvalds, 2005</li>
+          <li>Open source</li>
+          <li>VCS distribuído</li>
+          <li>Multiplataforma</li>
+          <li>Integración con varios editores e IDEs</li>
+        </ul>
+        </p>
+        <aside class="notes">
+          Git es una palabra en Inglés,
+          es mejor que no sepan su significado.
+        </aside>
+      </section>
+
+      <section>
+        <h2>¿Cómo funciona?</h2>
+        <ul>
+          <li>Le decimos a Git que mantenga un registro de nuestros archivos</li>
+          <li>Editamos nuestros archivos</li>
+          <li>Le decimos a Git que guarde nuestros cambios</li>
+          <li>Volvemos a editar nuestros archivos</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Conceptos básicos</h2>
+        <section>
+          <h3>Repositorio (repo)</h3>
+          <ul>
+            <li>Es nuestro proyecto</li>
+            <li>Tenemos repos locales y remotos</li>
+          </ul>
+          <aside class="notes">
+            Por ahora vamos a enfocarnos en repos locales,
+            más adelante hablaremos sobre los remotos.
+          </aside>
+        </section>
+        <section>
+          <h3>Commit</h3>
+          <ul>
+            <li>Un punto de restauración (snapshot) de nuesto proyecto</li>
+            <li>Cada commit está identificado por un hash (SHA-1)</li>
+            <p>
+              <code>a906cb2a4a904a152e80877d4088654daad0c859</code>.
+            </p>
+          </ul>
+          <aside class="notes">
+            Cada commit guarda el estado actual de todo nuestro proyecto.
+            Cada hash es único para cada commit, le sirve a git para comprobar
+            la integridad de nuestro commit.
+          </aside>
+        </section>
+        <section>
+          <h3>Los 3 estados</h3>
+          <ul>
+            <li>Área de trabajo (working directory)</li>
+            <li>Área de staging (staging area)</li>
+            <li>Área del repositorio (repo area)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Los 3 estados</h3>
+          <ul>
+            <li>Working directory (los archivos editados)</li>
+            <li>Staging area (cambios a ser guardados)</li>
+            <li>Repo area (cambios guardados)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Los 3 estados</h3>
+          <img src="img/git-states.png" alt="" />
+        </section>
+      </section>
+
+      <section class="center">
+        <h2>Instalación</h2>
+        <p>
+          <a href="https://git-scm.com/download/">
+            https://git-scm.com/download/
+          </a>
+        </p>
+        <p>
+          <code>
               git --version
             </code>
-          </p>
-        </section>
+        </p>
+      </section>
 
-        <section>
-          <header>
-            <h3>Haciéndole saber a Git quién soy</h3>
-            <i>Registrándonos como viajeros del tiempo</i>
-          </header>
-          <p>
-            <pre>
+      <section>
+        <header>
+          <h3>Haciéndole saber a Git quién soy</h3>
+          <i>Registrándonos como viajeros del tiempo</i>
+        </header>
+        <p>
+        <pre>
               <code class="bash" data-trim>
                 git config --global user.name "Santos Gallegos"
                 git config --global user.email "stsewd@proton.me"
               </code>
             </pre>
-          </p>
-          <aside class="notes">
-            <p>
-              Esto se hace una sóla vez.
-            </p>
-            <p>
-              Podemos comprobar que nuestros datos están correctos
-              ejecutando el mismo comando, pero sin el nombre/email.
-              O con <code>git config --list</code>.
-            </p>
-          </aside>
-        </section>
-
-        <section>
-          <header>
-            <h2>Iniciando nuestro repo</h2>
-            <i>Preparándo nuestra máquina del tiempo</i>
-          </header>
+        </p>
+        <aside class="notes">
           <p>
-            <pre>
+            Esto se hace una sóla vez.
+          </p>
+          <p>
+            Podemos comprobar que nuestros datos están correctos
+            ejecutando el mismo comando, pero sin el nombre/email.
+            O con <code>git config --list</code>.
+          </p>
+        </aside>
+      </section>
+
+      <section>
+        <header>
+          <h2>Iniciando nuestro repo</h2>
+          <i>Preparándo nuestra máquina del tiempo</i>
+        </header>
+        <p>
+        <pre>
               <code class="bash" data-trim>
                 cd /home/mi-proyecto/
                 git init
               </code>
             </pre>
-          </p>
-          <aside class="notes">
-            Podemos comprobar que nuestro repositorio se ha creado
-            comprobando que existe un directorio oculto <code>.git</code>.
-          </aside>
-        </section>
+        </p>
+        <aside class="notes">
+          Podemos comprobar que nuestro repositorio se ha creado
+          comprobando que existe un directorio oculto <code>.git</code>.
+        </aside>
+      </section>
 
+      <section>
+        <header>
+          <h2>Git status</h2>
+          <i>¿En qué estado están mis archivo?</i>
+        </header>
         <section>
-          <header>
-            <h2>Git status</h2>
-            <i>¿En qué estado están mis archivo?</i>
-          </header>
-          <section>
-            <p>
-              <pre>
+          <p>
+          <pre>
                 <code class="bash" data-trim>
                   git status
                 </code>
               </pre>
-            </p> 
-            <p>
-              Archivos nuevos no son registrados por Git (untracked).
-            </p>
-            <aside class="notes">
-              Nos dice el stado actual de nuestros archivos,
-              la rama
-            </aside>
-          </section>
-          <section>
-            <p>
-              Cambios a ser guardados
-              <pre>
+          </p>
+          <p>
+            Archivos nuevos no son registrados por Git (untracked).
+          </p>
+          <aside class="notes">
+            Nos dice el stado actual de nuestros archivos,
+            la rama
+          </aside>
+        </section>
+        <section>
+          <p>
+            Cambios a ser guardados
+          <pre>
                 <code class="bash" data-trim>
                   git add &lt;archivo&gt;
                 </code>
               </pre>
-            </p>
-            <aside class="notes">
-              Volver a hacer git status
-            </aside>
-          </section>
-          <section>
-            <p>
-              Guardar nuestros cambios
-              <pre>
+          </p>
+          <aside class="notes">
+            Volver a hacer git status
+          </aside>
+        </section>
+        <section>
+          <p>
+            Guardar nuestros cambios
+          <pre>
                 <code class="bash" data-trim>
                   git commit
                 </code>
               </pre>
-            </p>
-            <aside class="notes">
-              Hacer varios commits.
-              También podemos usar git commit -m "Mensaje".
-              Volver a hacer git status.
-              Mostrar como obtener ayuda desde Git.
-            </aside>
-          </section>
-          <section>
-            <img src="img/git-flow.png" alt=""/>
-          </section>
+          </p>
+          <aside class="notes">
+            Hacer varios commits.
+            También podemos usar git commit -m "Mensaje".
+            Volver a hacer git status.
+            Mostrar como obtener ayuda desde Git.
+          </aside>
         </section>
+        <section>
+          <img src="img/git-flow.png" alt="" />
+        </section>
+      </section>
+
+      <section>
+        <header>
+          <h2>¿Dónde están mis commits?</h2>
+          <i>Explorando el pasado</i>
+        </header>
 
         <section>
-          <header>
-            <h2>¿Dónde están mis commits?</h2>
-            <i>Explorando el pasado</i>
-          </header>
-
-          <section>
-            <pre>
+          <pre>
               <code class="bash" data-trim>
                 # Ver todos nuestros commits
                 git log
@@ -408,28 +409,28 @@
                 git show &lt;hash&gt;
               </code>
             </pre>
-            <aside class="notes">
-              Explicar los signos de un diff y sobre como git
-              interpreta los cambios.
-            </aside>
-          </section>
+          <aside class="notes">
+            Explicar los signos de un diff y sobre como git
+            interpreta los cambios.
+          </aside>
+        </section>
+      </section>
+
+      <section>
+        <header>
+          <h2>Ignorando archivos</h2>
+          <i>Información no relevante para mis viajes en el tiempo</i>
+        </header>
+        <section>
+          <ul>
+            <li>Archivos autogenerados</li>
+            <li>Archivos sensibles (contraseñas, configuraciones de producción)</li>
+            <li>Archivos del sistema operativo (*~, .DS_Store, Thumbs.db)</li>
+          </ul>
         </section>
 
         <section>
-          <header>
-            <h2>Ignorando archivos</h2>
-            <i>Información no relevante para mis viajes en el tiempo</i>
-          </header>
-          <section>
-            <ul>
-              <li>Archivos autogenerados</li>
-              <li>Archivos sensibles (contraseñas, configuraciones de producción)</li>
-              <li>Archivos del sistema operativo (*~, .DS_Store, Thumbs.db)</li>
-            </ul>
-          </section>
-            
-          <section>
-            <pre>
+          <pre>
               <code class="nohighlight" data-trim>
                 # Archivo .gitignore
 
@@ -443,95 +444,95 @@
                 passwords.txt
               </code>
             </pre>
-            <aside class="notes">
-              Agregar un par de cosas al .gitignore
-            </aside>
-          </section>
-          
+          <aside class="notes">
+            Agregar un par de cosas al .gitignore
+          </aside>
         </section>
 
-        <section class="center">
-          <h2>¿Cuándo vamos a viajar en el tiempo?</h2>
-        </section>
+      </section>
 
-        <section>
-          <header>
-            <h2>Viajando en el tiempo</h2>
-            <i>Abróchate el cinturón</i>
-          </header>
-          <pre class="fragment">
+      <section class="center">
+        <h2>¿Cuándo vamos a viajar en el tiempo?</h2>
+      </section>
+
+      <section>
+        <header>
+          <h2>Viajando en el tiempo</h2>
+          <i>Abróchate el cinturón</i>
+        </header>
+        <pre class="fragment">
             <code class="bash" data-trim>
               git checkout &lt;hash&gt;
             </code>
           </pre>
-          <aside class="notes">
-            Hacer un par de checkouts,
-            mostrar el log,
-            volver a la rama master.
-          </aside>
-        </section>
+        <aside class="notes">
+          Hacer un par de checkouts,
+          mostrar el log,
+          volver a la rama master.
+        </aside>
+      </section>
 
-        <section class="center">
-          <header>
-            <h2>GitHub</h2>
-            <small>Un Dropbox para nuestras máquinas del tiempo</small>
-          </header>
-        </section>
-
-        <section>
+      <section class="center">
+        <header>
           <h2>GitHub</h2>
-          <ul>
-            <li>Nos permite alojar nuestros repos</li>
-            <li>Aloja varios proyectos open source (Linux y Python)</li>
-            <li>Organizaciones, seguidores, estrellas</li>
-            <li>Bug tracker (issues)</li>
-            <li>Code reviews</li>
-            <li>Permisos sobre un repositorio</li>
-            <li><strong>Pull requests (PR)</strong></li>
-          </ul>
-          <aside class="notes">
-            <p>
-              Pull requests son propio de GitHub, no de git. 
-              Y muchas cosas más para nuestros proyectos como wiki, tablero de tareas,
-              web hooks para interactuar con otros servicios (como un servicio de C.I.).
-              No es el único, existe BitBucket, GitLab.
-            </p>
-            <p>
-              <ul>
-                <li>Crear un repo en GitHub (con readme y licence)</li>
-              </ul>
-            </p>
-          </aside>
-        </section>
+          <small>Un Dropbox para nuestras máquinas del tiempo</small>
+        </header>
+      </section>
 
-        <section>
-          <header>
-            <h2>Clonando repositorios</h2>
-            <i>¡Mamá, quiero esa máquina del tiempo!</i>
-          </header>
-          <pre>
+      <section>
+        <h2>GitHub</h2>
+        <ul>
+          <li>Nos permite alojar nuestros repos</li>
+          <li>Aloja varios proyectos open source (Linux y Python)</li>
+          <li>Organizaciones, seguidores, estrellas</li>
+          <li>Bug tracker (issues)</li>
+          <li>Code reviews</li>
+          <li>Permisos sobre un repositorio</li>
+          <li><strong>Pull requests (PR)</strong></li>
+        </ul>
+        <aside class="notes">
+          <p>
+            Pull requests son propio de GitHub, no de git.
+            Y muchas cosas más para nuestros proyectos como wiki, tablero de tareas,
+            web hooks para interactuar con otros servicios (como un servicio de C.I.).
+            No es el único, existe BitBucket, GitLab.
+          </p>
+          <p>
+          <ul>
+            <li>Crear un repo en GitHub (con readme y licence)</li>
+          </ul>
+          </p>
+        </aside>
+      </section>
+
+      <section>
+        <header>
+          <h2>Clonando repositorios</h2>
+          <i>¡Mamá, quiero esa máquina del tiempo!</i>
+        </header>
+        <pre>
             <code class="bash" data-trim>
               git clone &lt;url del repo&gt;
             </code>
           </pre>
-          <aside class="notes">
-            Clonar el repo de PythonEcuador.
-            Clonar el repo anteriormente creado.
-          </aside>
-        </section>
+        <aside class="notes">
+          Clonar el repo de PythonEcuador.
+          Clonar el repo anteriormente creado.
+        </aside>
+      </section>
 
+      <section>
+        <h2>Remotos</h2>
         <section>
-          <h2>Remotos</h2>
-          <section>
-            <ul>
-              <li>Un repo que está en otro lado</li>
-              <li>Cuando hacemos un clone, se crea uno</li>
-              <li>Podemos agregar varios remotos</li>
-              <li>Nos sirven para interactuar con otros repos</li>
-            </ul>
-          </section>
-          <section>
-            <pre>
+          <ul>
+            <li>Un repo que está en otro lado</li>
+            <li>Cuando hacemos un clone, se crea uno</li>
+            <li>Podemos agregar varios remotos</li>
+            <li>Nos sirven para interactuar con otros repos</li>
+          </ul>
+        </section>
+        <section>
+          <pre>
               <code class="bash" data-trim>
                 # Listar remotos
                 git remote -v
@@ -543,23 +544,23 @@
                 git remote remove &lt;nombre&gt;
               </code>
             </pre>
-            <aside class="notes">
-              Listar el remoto del repo clonado,
-              eliminar el remoto y volver a agregarlo.
-              Tenemos más comandos como renombrar, mostrar, etc
-            </aside>
-          </section>
+          <aside class="notes">
+            Listar el remoto del repo clonado,
+            eliminar el remoto y volver a agregarlo.
+            Tenemos más comandos como renombrar, mostrar, etc
+          </aside>
         </section>
+      </section>
 
-        <section>
-          <h2>Publicar y obtener cambios</h2>
-          <p>
-            Para compartir nuestros cambios
-            debemos subirlos a nuestro remoto,
-            o sincronizar nuestro repo local en caso que alguien más
-            haya subido sus cambios.
-          </p>
-          <pre>
+      <section>
+        <h2>Publicar y obtener cambios</h2>
+        <p>
+          Para compartir nuestros cambios
+          debemos subirlos a nuestro remoto,
+          o sincronizar nuestro repo local en caso que alguien más
+          haya subido sus cambios.
+        </p>
+        <pre>
             <code class="bash" data-trim>
               # Publicar cambios a un remoto
               git push &lt;remoto&gt; &lt;rama&gt;
@@ -568,48 +569,48 @@
               git pull &lt;remoto&gt; &lt;rama&gt;
             </code>
           </pre>
-        </section>
+      </section>
 
-        <section class="center">
-          <header>
-            <h2>Ramas</h2>
-            <i>Creando líneas del tiempo alternativas</i>
-            </br>
-            <i>¿Qué pasaría si...?</i>
-          </header>
-        </section>
-
-        <section>
+      <section class="center">
+        <header>
           <h2>Ramas</h2>
-          <section>
-            <ul>
-              <li>Nos permiten trabajar de manera paralela</li>
-              <li>Experimentar con nuevas características</li>
-              <li>Podemos mezclar los cambios a nuestra rama principal</li>
-              <li>Ideal para trabajar con otras personas</li>
-              <li>Por defecto tenemos una rama <i>main</i> o <i>master</i></li>
-            </ul>
-          </section>
-          <section>
-            <img src="img/commits.png" alt=""/>
-          </section>
-          <section>
-            <img src="img/branch.png" alt=""/>
-          </section>
-          <section>
-            <img src="img/branch-2.png" alt=""/>
-          </section>
-          <section>
-            <img src="img/branch-3.png" alt=""/>
-          </section>
-          <section>
-            <img src="img/branch-4.png" alt=""/>
-          </section>
-          <section>
-            <img src="img/branch-5.png" alt=""/>
-          </section>
-          <section>
-            <pre>
+          <i>Creando líneas del tiempo alternativas</i>
+          </br>
+          <i>¿Qué pasaría si...?</i>
+        </header>
+      </section>
+
+      <section>
+        <h2>Ramas</h2>
+        <section>
+          <ul>
+            <li>Nos permiten trabajar de manera paralela</li>
+            <li>Experimentar con nuevas características</li>
+            <li>Podemos mezclar los cambios a nuestra rama principal</li>
+            <li>Ideal para trabajar con otras personas</li>
+            <li>Por defecto tenemos una rama <i>main</i> o <i>master</i></li>
+          </ul>
+        </section>
+        <section>
+          <img src="img/commits.png" alt="" />
+        </section>
+        <section>
+          <img src="img/branch.png" alt="" />
+        </section>
+        <section>
+          <img src="img/branch-2.png" alt="" />
+        </section>
+        <section>
+          <img src="img/branch-3.png" alt="" />
+        </section>
+        <section>
+          <img src="img/branch-4.png" alt="" />
+        </section>
+        <section>
+          <img src="img/branch-5.png" alt="" />
+        </section>
+        <section>
+          <pre>
               <code class="bash" data-trim>
                 # Crear una rama basada en la rama actual
                 git branch &lt;nombre&gt; 
@@ -621,26 +622,26 @@
                 git checkout -b &lt;nombre&gt; 
               </code>
             </pre>
-            <aside class="notes">
-              Ejecutar los comandos, recordar usar help
-            </aside>
-          </section>
+          <aside class="notes">
+            Ejecutar los comandos, recordar usar help
+          </aside>
         </section>
+      </section>
 
+      <section>
+        <h2>Problemas de los viajes en el tiempo</h2>
         <section>
-          <h2>Problemas de los viajes en el tiempo</h2>
-          <section>
-            <p>
-              Si tenemos cambios que no hemos guardado (commit).
-              Y queremos cambiar de rama/commit, Git se quejará.
-            </p>  
-            <aside class="notes">
-              Hacer cambios cruzados entre ramas para mostrar como git
-              se queja.
-            </aside>
-          </section>
-          <section>
-            <pre>
+          <p>
+            Si tenemos cambios que no hemos guardado (commit).
+            Y queremos cambiar de rama/commit, Git se quejará.
+          </p>
+          <aside class="notes">
+            Hacer cambios cruzados entre ramas para mostrar como git
+            se queja.
+          </aside>
+        </section>
+        <section>
+          <pre>
               <code class="bash" data-trim>
                 # Guardar nuestros cambios sin confirmar
                 git stash
@@ -649,29 +650,29 @@
                 git stash pop
               </code>
             </pre>
-            <aside class="notes">
-              Hacer el mismo checkout con el stash
-              para comprobar que git no se queja esta vez
-            </aside>
-          </section>
+          <aside class="notes">
+            Hacer el mismo checkout con el stash
+            para comprobar que git no se queja esta vez
+          </aside>
         </section>
+      </section>
 
+      <section>
+        <h2>Mezclando ramas</h2>
         <section>
-          <h2>Mezclando ramas</h2>
-          <section>
-            <p>
-              Nuestra nueva funcionalidad funciona.
-              Tiempo de mezclarla a nuestra rama principal.
-            </p>
-          </section>
-          <section>
-            <img src="img/pre-merge.png" alt=""/>
-          </section>
-          <section>
-            <img src="img/merge.png" alt=""/>
-          </section>
-          <section>
-            <pre>
+          <p>
+            Nuestra nueva funcionalidad funciona.
+            Tiempo de mezclarla a nuestra rama principal.
+          </p>
+        </section>
+        <section>
+          <img src="img/pre-merge.png" alt="" />
+        </section>
+        <section>
+          <img src="img/merge.png" alt="" />
+        </section>
+        <section>
+          <pre>
               <code class="bash" data-trim>
                 # Cambiar a la rama base
                 git checkout &lt;rama base&gt;
@@ -680,151 +681,152 @@
                 git merge &lt;otra rama&gt;
               </code>
             </pre>
-            <aside class="notes">
-              Si las ramas han divergido, se creará un nuevo commit
-              (merge commit). Mostrar un merge.
-            </aside>
-          </section>
-          <section>
-            <p>
-              Conflictos al mezclar
-              <ul>
-                <li class="fragment">Cuando en ambas ramas se modificaron las mismas líneas de un archivo</li>
-                <li class="fragment">Basta con abrir el archivo y buscar las marcas especiales</li>
-                <li class="fragment">Quedarnos con los cambios necesarios</li>
-                <li class="fragment">Hacer un git add para marcar los conflictos como resueltos</li>
-                <li class="fragment">Hacer un commit para continuar con el merge</li>
-              </ul>
-            </p>
-            <aside class="notes">
-              Generar un conflicto y resolver el merge.
-            </aside>
-          </section>
+          <aside class="notes">
+            Si las ramas han divergido, se creará un nuevo commit
+            (merge commit). Mostrar un merge.
+          </aside>
         </section>
-
         <section>
-          <h2>Forks</h2>
           <p>
-            Si vemos un proyecto en GitHub que nos gustaría mejorar o colaborar en su desarrollo.
-            <strong>Hacemos un fork</strong>. Se creará una copia del repositorio en tu tuenta.
+            Conflictos al mezclar
+          <ul>
+            <li class="fragment">Cuando en ambas ramas se modificaron las mismas líneas de un archivo</li>
+            <li class="fragment">Basta con abrir el archivo y buscar las marcas especiales</li>
+            <li class="fragment">Quedarnos con los cambios necesarios</li>
+            <li class="fragment">Hacer un git add para marcar los conflictos como resueltos</li>
+            <li class="fragment">Hacer un commit para continuar con el merge</li>
+          </ul>
           </p>
           <aside class="notes">
-            Hacer un fork del repo de Python Ecuador
+            Generar un conflicto y resolver el merge.
           </aside>
         </section>
+      </section>
 
-        <section>
-          <h2>Pull requests (PR)</h2>
-          <p>Es la manera en que envias tus cambios a un proyecto.</p>
-          <ul>
-            <li>Hacer un fork</li>
-            <li>Clonar el repositorio</li>
-            <li>Agregar un remoto</li>
-            <li>Crear una nueva rama local</li>
-            <li>Hacer los cambios</li>
-            <li>Enviar un pull requests</li>
-          </ul>
-          <aside class="notes">
-            Hacer un PR en el repo de Python Ecuador.
-            Mencionar que pueden empezar a hacer un PR en esta presentación.
-          </aside>
-        </section>
+      <section>
+        <h2>Forks</h2>
+        <p>
+          Si vemos un proyecto en GitHub que nos gustaría mejorar o colaborar en su desarrollo.
+          <strong>Hacemos un fork</strong>. Se creará una copia del repositorio en tu tuenta.
+        </p>
+        <aside class="notes">
+          Hacer un fork del repo de Python Ecuador
+        </aside>
+      </section>
 
-        <section>
-          <header>
-            <h2>Clientes gráficos</h2>
-            <i>No todas las máquinas del tiempo son blanco y negro</i>
-          </header>
-          <ul>
-            <li>Es importante aprender lo básico desde la terminal</li>
-            <li>Lo aprendes una vez</li>
-            <li>Luego podrás usar cualquier cliente gráfico sin problema</li>
-            <li>Varios IDEs y editores cuentan con integración con Git</li>
-          </ul>
-          <aside class="notes">
-            Mostrar gitg
-          </aside>
-        </section>
+      <section>
+        <h2>Pull requests (PR)</h2>
+        <p>Es la manera en que envias tus cambios a un proyecto.</p>
+        <ul>
+          <li>Hacer un fork</li>
+          <li>Clonar el repositorio</li>
+          <li>Agregar un remoto</li>
+          <li>Crear una nueva rama local</li>
+          <li>Hacer los cambios</li>
+          <li>Enviar un pull requests</li>
+        </ul>
+        <aside class="notes">
+          Hacer un PR en el repo de Python Ecuador.
+          Mencionar que pueden empezar a hacer un PR en esta presentación.
+        </aside>
+      </section>
 
-        <section>
-          <h2>Recursos adicionales</h2>
-          <ul>
-            <li>
-              <a href="https://git-scm.com/book/">
-                Pro Git
+      <section>
+        <header>
+          <h2>Clientes gráficos</h2>
+          <i>No todas las máquinas del tiempo son blanco y negro</i>
+        </header>
+        <ul>
+          <li>Es importante aprender lo básico desde la terminal</li>
+          <li>Lo aprendes una vez</li>
+          <li>Luego podrás usar cualquier cliente gráfico sin problema</li>
+          <li>Varios IDEs y editores cuentan con integración con Git</li>
+        </ul>
+        <aside class="notes">
+          Mostrar gitg
+        </aside>
+      </section>
+
+      <section>
+        <h2>Recursos adicionales</h2>
+        <ul>
+          <li>
+            <a href="https://git-scm.com/book/">
+              Pro Git
+            </a>
+          </li>
+          <li>
+            <a href="https://www.atlassian.com/git/tutorials">
+              Tutoriales de Git de Atlassian
+            </a>
+          </li>
+          <li>
+            <a href="https://try.github.io">
+              TryGit en el navegador
+            </a>
+          </li>
+          <li>
+            <a href="https://help.github.com/">
+              Ayuda de GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://opensource.guide/">
+              Guías de Código Abierto
+            </a>
+          </li>
+        </ul>
+        <footer class="footer">
+          <p>
+            <small class="text-center">
+              <a href="https://github.com/stsewd/charla-git/">
+                Código fuente en GitHub <i class="fas fa-code-branch"></i>
               </a>
-            </li>
-            <li>
-              <a href="https://www.atlassian.com/git/tutorials">
-                Tutoriales de Git de Atlassian
+            </small>
+          </p>
+          <p>
+            <small>
+              Santos Gallegos
+              -
+              <a href="mailto:santos_g@outlook.com">
+                santos_g@outlook.com
               </a>
-            </li>
-            <li>
-              <a href="https://try.github.io">
-                TryGit en el navegador
-              </a>
-            </li>
-            <li>
-              <a href="https://help.github.com/">
-                Ayuda de GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://opensource.guide/">
-                Guías de Código Abierto
-              </a>
-            </li>
-          </ul>
-          <footer class="footer">
-            <p>
-              <small class="text-center">
-                <a href="https://github.com/stsewd/charla-git/">
-                  Código fuente en GitHub <i class="fas fa-code-branch"></i>
-                </a>
-              </small>
-            </p>
-            <p>
-              <small>
-                Santos Gallegos
-                -
-                <a href="mailto:santos_g@outlook.com">
-                  santos_g@outlook.com
-                </a>
-              </small>
-              <br>
-              <small>
-                @stsewd
-                <a href="http://github.com/stsewd"><i class="fab fa-github"></i></a>
-                <a href="http://twitter.com/stsewd"><i class="fab fa-twitter"></i></a>
-              </small>
-            </p>
-          </footer>
-          <aside class="notes">
-            Invitar a colaborar en el repo de python Ecuador,
-            proponer reunirnos un día a colaborar en grupo.
-          </aside>
-        </section>
-      </div>
+            </small>
+            <br>
+            <small>
+              @stsewd
+              <a href="http://github.com/stsewd"><i class="fab fa-github"></i></a>
+              <a href="http://twitter.com/stsewd"><i class="fab fa-twitter"></i></a>
+            </small>
+          </p>
+        </footer>
+        <aside class="notes">
+          Invitar a colaborar en el repo de python Ecuador,
+          proponer reunirnos un día a colaborar en grupo.
+        </aside>
+      </section>
     </div>
+  </div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        history: true,
-        center: false,
-        maxScale: 0.7,
-        dependencies: [
-          { src: 'plugin/markdown/marked.js' },
-          { src: 'plugin/markdown/markdown.js' },
-          { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
-      });
-    </script>
-  </body>
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      history: true,
+      center: false,
+      maxScale: 0.7,
+      dependencies: [
+        {src: 'plugin/markdown/marked.js'},
+        {src: 'plugin/markdown/markdown.js'},
+        {src: 'plugin/notes/notes.js', async: true},
+        {src: 'plugin/highlight/highlight.js', async: true, callback: function () {hljs.initHighlightingOnLoad();}}
+      ]
+    });
+  </script>
+</body>
+
 </html>
